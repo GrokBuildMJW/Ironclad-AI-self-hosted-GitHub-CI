@@ -1,4 +1,4 @@
-# Self-hosted GitHub CI for Ironclad AI — a beginner how-to
+# Self-hosted GitHub CI for Ironclad AI
 
 This is an **example lab**, not a dump of anyone’s real hostnames. The idea: a few small PCs run GitHub Actions for **Ironclad** so you do not buy GitHub-hosted minutes. Public sources will live in the `ironclad` repo. Names below (`devbox`, `linux-ci`, …) are placeholders. Pick your own aliases in `~/.ssh/config`.
 

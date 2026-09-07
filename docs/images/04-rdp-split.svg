@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 520" role="img" aria-labelledby="t4 d4">
+  <title id="t4">RDP split between Windows operator PC and Linux devlin</title>
+  <desc id="d4">Windows operator uses Remote Desktop to a Linux Tiny. Code lives on Linux. GitHub Actions never runs on either of these two machines.</desc>
+  <rect width="1100" height="520" fill="#0b0f14"/>
+  <text x="40" y="44" fill="#e8eef4" font-family="Segoe UI, system-ui, sans-serif" font-size="24" font-weight="700">Extreme split: Windows is a monitor</text>
+  <text x="40" y="70" fill="#8b9aab" font-family="Segoe UI, system-ui, sans-serif" font-size="14">The operator PC does not hold the repo. The Linux Tiny does not run CI. Remote Desktop is the only daily path between them.</text>
+
+  <g font-family="Segoe UI, system-ui, sans-serif">
+    <rect x="40" y="100" rx="16" width="460" height="280" fill="#1a2330" stroke="#f0a04b" stroke-width="2"/>
+    <text x="64" y="136" fill="#f0a04b" font-size="12" letter-spacing="1.2">OPERATOR · WINDOWS</text>
+    <text x="64" y="176" fill="#e8eef4" font-size="22" font-weight="700">Your Windows PC</text>
+    <text x="64" y="210" fill="#b7c4d2" font-size="15">mstsc  →  devlin:3389</text>
+    <text x="64" y="242" fill="#8b9aab" font-size="14">GNOME Remote Login on Ubuntu.</text>
+    <text x="64" y="264" fill="#8b9aab" font-size="14">First prompt: the device user.</text>
+    <text x="64" y="286" fill="#8b9aab" font-size="14">Then GDM: the Linux account.</text>
+    <text x="64" y="320" fill="#8b9aab" font-size="14">No GitHub runner here.</text>
+    <text x="64" y="342" fill="#8b9aab" font-size="14">No product checkout required here.</text>
+
+    <rect x="600" y="100" rx="16" width="460" height="280" fill="#1a2330" stroke="#f0a04b" stroke-width="2"/>
+    <text x="624" y="136" fill="#f0a04b" font-size="12" letter-spacing="1.2">DEV WORKSTATION · LINUX</text>
+    <text x="624" y="176" fill="#e8eef4" font-size="22" font-weight="700">devlin</text>
+    <text x="624" y="210" fill="#b7c4d2" font-size="15">ThinkCentre Tiny · Ubuntu Desktop</text>
+    <text x="624" y="242" fill="#8b9aab" font-size="14">Cursor, git, uv, Docker for you.</text>
+    <text x="624" y="264" fill="#8b9aab" font-size="14">AppArmor stays on. Do not copy</text>
+    <text x="624" y="286" fill="#8b9aab" font-size="14">the runner kernel pin onto this box.</text>
+    <text x="624" y="320" fill="#8b9aab" font-size="14">git push origin  from here.</text>
+    <text x="624" y="342" fill="#8b9aab" font-size="14">Never install actions.runner.* here.</text>
+  </g>
+
+  <polygon points="520,230 580,210 580,250" fill="#3ee0c5"/>
+  <text x="550" y="198" text-anchor="middle" fill="#3ee0c5" font-family="Segoe UI, system-ui, sans-serif" font-size="13">RDP</text>
+
+  <rect x="40" y="406" rx="12" width="1020" height="84" fill="#151c24" stroke="#2a3544"/>
+  <text x="60" y="440" fill="#e8eef4" font-family="Segoe UI, system-ui, sans-serif" font-size="15">Why this is the point: a crashed CI job cannot eat the editor. A Windows update cannot eat the Linux toolchain. A GitHub runner cannot write into the tree you are typing in.</text>
+  <text x="60" y="466" fill="#8b9aab" font-family="Segoe UI, system-ui, sans-serif" font-size="14">VNC is not the path. xrdp is fallback only. Daily driver is Cursor on Linux, viewed with the Windows Remote Desktop client.</text>
+</svg>

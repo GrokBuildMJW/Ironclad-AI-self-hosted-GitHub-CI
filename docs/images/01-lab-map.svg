@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 640" role="img" aria-labelledby="t d">
+  <title id="t">Example lab map</title>
+  <desc id="d">Six machines on a LAN: three GitHub Actions runners, two LLM boxes, one Linux dev workstation reached by RDP from Windows. GitHub sits above the LAN.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#121820"/>
+      <stop offset="1" stop-color="#0b0f14"/>
+    </linearGradient>
+    <filter id="s" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect width="1100" height="640" fill="url(#bg)"/>
+  <text x="40" y="48" fill="#e8eef4" font-family="Segoe UI, system-ui, sans-serif" font-size="26" font-weight="700">The lab, in one picture</text>
+  <text x="40" y="76" fill="#8b9aab" font-family="Segoe UI, system-ui, sans-serif" font-size="15">Only the three runner boxes talk to GitHub Actions. The others stay on the LAN.</text>
+
+  <rect x="340" y="100" rx="18" width="420" height="86" fill="#1c2734" stroke="#3ee0c5" stroke-width="2" filter="url(#s)"/>
+  <text x="550" y="136" text-anchor="middle" fill="#3ee0c5" font-family="Segoe UI, system-ui, sans-serif" font-size="13" letter-spacing="1.5">GITHUB</text>
+  <text x="550" y="164" text-anchor="middle" fill="#e8eef4" font-family="Segoe UI, system-ui, sans-serif" font-size="18" font-weight="700">private repo  ironclad-ai</text>
+
+  <line x1="550" y1="186" x2="550" y2="228" stroke="#3ee0c5" stroke-width="2"/>
+  <text x="564" y="220" fill="#8b9aab" font-family="Segoe UI, system-ui, sans-serif" font-size="12">Actions jobs</text>
+
+  <!-- runners -->
+  <g font-family="Segoe UI, system-ui, sans-serif">
+    <rect x="40" y="240" rx="16" width="300" height="130" fill="#1a2330" stroke="#3d8bfd" stroke-width="2" filter="url(#s)"/>
+    <text x="58" y="270" fill="#3d8bfd" font-size="12" letter-spacing="1.2">RUNNER · LINUX MINI-PC</text>
+    <text x="58" y="300" fill="#e8eef4" font-size="20" font-weight="700">arlin</text>
+    <text x="58" y="326" fill="#b7c4d2" font-size="14">Ubuntu 24.04 · native listener</text>
+    <text x="58" y="348" fill="#8b9aab" font-size="13">labels: self-hosted, Linux, arlin</text>
+
+    <rect x="400" y="240" rx="16" width="300" height="130" fill="#1a2330" stroke="#3d8bfd" stroke-width="2" filter="url(#s)"/>
+    <text x="418" y="270" fill="#3d8bfd" font-size="12" letter-spacing="1.2">RUNNER · WINDOWS</text>
+    <text x="418" y="300" fill="#e8eef4" font-size="20" font-weight="700">arwin</text>
+    <text x="418" y="326" fill="#b7c4d2" font-size="14">Windows desktop · Windows service</text>
+    <text x="418" y="348" fill="#8b9aab" font-size="13">labels: self-hosted, Windows, arwin</text>
+
+    <rect x="760" y="240" rx="16" width="300" height="130" fill="#1a2330" stroke="#3d8bfd" stroke-width="2" filter="url(#s)"/>
+    <text x="778" y="270" fill="#3d8bfd" font-size="12" letter-spacing="1.2">RUNNER · MAC MINI</text>
+    <text x="778" y="300" fill="#e8eef4" font-size="20" font-weight="700">macmini</text>
+    <text x="778" y="326" fill="#b7c4d2" font-size="14">Apple Silicon · LaunchDaemon</text>
+    <text x="778" y="348" fill="#8b9aab" font-size="13">labels: self-hosted, macOS, macmini</text>
+  </g>
+
+  <line x1="190" y1="370" x2="190" y2="400" stroke="#3d8bfd" stroke-width="2"/>
+  <line x1="550" y1="370" x2="550" y2="400" stroke="#3d8bfd" stroke-width="2"/>
+  <line x1="910" y1="370" x2="910" y2="400" stroke="#3d8bfd" stroke-width="2"/>
+  <line x1="190" y1="400" x2="910" y2="400" stroke="#3d8bfd" stroke-width="2"/>
+  <line x1="550" y1="228" x2="550" y2="240" stroke="#3ee0c5" stroke-width="2"/>
+  <line x1="190" y1="228" x2="910" y2="228" stroke="#3ee0c5" stroke-width="1.5" stroke-dasharray="5 6"/>
+  <line x1="190" y1="228" x2="190" y2="240" stroke="#3ee0c5" stroke-width="2"/>
+  <line x1="910" y1="228" x2="910" y2="240" stroke="#3ee0c5" stroke-width="2"/>
+
+  <!-- not runners -->
+  <g font-family="Segoe UI, system-ui, sans-serif">
+    <rect x="40" y="430" rx="16" width="300" height="170" fill="#1a2330" stroke="#f0a04b" stroke-width="2" filter="url(#s)"/>
+    <text x="58" y="460" fill="#f0a04b" font-size="12" letter-spacing="1.2">NOT A RUNNER · DEV</text>
+    <text x="58" y="490" fill="#e8eef4" font-size="20" font-weight="700">devlin</text>
+    <text x="58" y="516" fill="#b7c4d2" font-size="14">Linux Tiny · Cursor + CLIs</text>
+    <text x="58" y="538" fill="#8b9aab" font-size="13">You RDP in from Windows.</text>
+    <text x="58" y="558" fill="#8b9aab" font-size="13">No Actions listener on this box.</text>
+    <text x="58" y="578" fill="#8b9aab" font-size="13">Extreme split: write ≠ CI.</text>
+
+    <rect x="400" y="430" rx="16" width="300" height="170" fill="#1a2330" stroke="#9b8cff" stroke-width="2" filter="url(#s)"/>
+    <text x="418" y="460" fill="#9b8cff" font-size="12" letter-spacing="1.2">NOT A RUNNER · CODER LLM</text>
+    <text x="418" y="490" fill="#e8eef4" font-size="20" font-weight="700">ai4090</text>
+    <text x="418" y="516" fill="#b7c4d2" font-size="14">RTX 4090 · llama.cpp :8090</text>
+    <text x="418" y="538" fill="#8b9aab" font-size="13">GPU is for the coder model.</text>
+    <text x="418" y="558" fill="#8b9aab" font-size="13">CI used to live here. It moved.</text>
+
+    <rect x="760" y="430" rx="16" width="300" height="170" fill="#1a2330" stroke="#9b8cff" stroke-width="2" filter="url(#s)"/>
+    <text x="778" y="460" fill="#9b8cff" font-size="12" letter-spacing="1.2">NOT A RUNNER · ORCHESTRATOR LLM</text>
+    <text x="778" y="490" fill="#e8eef4" font-size="20" font-weight="700">spark</text>
+    <text x="778" y="516" fill="#b7c4d2" font-size="14">DGX Spark · SGLang :8000</text>
+    <text x="778" y="538" fill="#8b9aab" font-size="13">One GPU occupant. No CI.</text>
+    <text x="778" y="558" fill="#8b9aab" font-size="13">Ironclad talks to this API.</text>
+  </g>
+</svg>

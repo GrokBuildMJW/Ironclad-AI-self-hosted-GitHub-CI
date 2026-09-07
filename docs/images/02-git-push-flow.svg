@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 420" role="img" aria-labelledby="t2 d2">
+  <title id="t2">Path of a git push</title>
+  <desc id="d2">Developer on Windows RDPs to Linux devlin, commits, pushes to GitHub. GitHub then dispatches jobs to the three self-hosted runners. LLM boxes are not in this path.</desc>
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#3ee0c5"/>
+    </marker>
+  </defs>
+  <rect width="1100" height="420" fill="#0b0f14"/>
+  <text x="40" y="44" fill="#e8eef4" font-family="Segoe UI, system-ui, sans-serif" font-size="24" font-weight="700">What happens when you push</text>
+  <text x="40" y="70" fill="#8b9aab" font-family="Segoe UI, system-ui, sans-serif" font-size="14">Write code on the Linux box. GitHub never sees your GPU boxes.</text>
+
+  <g font-family="Segoe UI, system-ui, sans-serif">
+    <rect x="36" y="110" rx="14" width="200" height="120" fill="#1a2330" stroke="#f0a04b" stroke-width="2"/>
+    <text x="136" y="148" text-anchor="middle" fill="#f0a04b" font-size="12">1 · WINDOWS PC</text>
+    <text x="136" y="178" text-anchor="middle" fill="#e8eef4" font-size="16" font-weight="700">mstsc</text>
+    <text x="136" y="202" text-anchor="middle" fill="#8b9aab" font-size="13">Remote Desktop</text>
+    <text x="136" y="220" text-anchor="middle" fill="#8b9aab" font-size="13">to devlin :3389</text>
+
+    <rect x="292" y="110" rx="14" width="200" height="120" fill="#1a2330" stroke="#f0a04b" stroke-width="2"/>
+    <text x="392" y="148" text-anchor="middle" fill="#f0a04b" font-size="12">2 · DEVLIN</text>
+    <text x="392" y="178" text-anchor="middle" fill="#e8eef4" font-size="16" font-weight="700">git push</text>
+    <text x="392" y="202" text-anchor="middle" fill="#8b9aab" font-size="13">Cursor + CLIs</text>
+    <text x="392" y="220" text-anchor="middle" fill="#8b9aab" font-size="13">not a runner</text>
+
+    <rect x="548" y="110" rx="14" width="200" height="120" fill="#1a2330" stroke="#3ee0c5" stroke-width="2"/>
+    <text x="648" y="148" text-anchor="middle" fill="#3ee0c5" font-size="12">3 · GITHUB</text>
+    <text x="648" y="178" text-anchor="middle" fill="#e8eef4" font-size="16" font-weight="700">ironclad-ai</text>
+    <text x="648" y="202" text-anchor="middle" fill="#8b9aab" font-size="13">workflow starts</text>
+    <text x="648" y="220" text-anchor="middle" fill="#8b9aab" font-size="13">no hosted minutes</text>
+
+    <rect x="804" y="56" rx="14" width="260" height="228" fill="#1a2330" stroke="#3d8bfd" stroke-width="2"/>
+    <text x="934" y="90" text-anchor="middle" fill="#3d8bfd" font-size="12">4 · YOUR MACHINES</text>
+    <text x="934" y="128" text-anchor="middle" fill="#e8eef4" font-size="16" font-weight="700">arlin</text>
+    <text x="934" y="148" text-anchor="middle" fill="#8b9aab" font-size="13">Linux jobs</text>
+    <text x="934" y="180" text-anchor="middle" fill="#e8eef4" font-size="16" font-weight="700">arwin</text>
+    <text x="934" y="200" text-anchor="middle" fill="#8b9aab" font-size="13">Windows jobs</text>
+    <text x="934" y="232" text-anchor="middle" fill="#e8eef4" font-size="16" font-weight="700">macmini</text>
+    <text x="934" y="252" text-anchor="middle" fill="#8b9aab" font-size="13">macOS jobs</text>
+  </g>
+
+  <line x1="236" y1="170" x2="292" y2="170" stroke="#3ee0c5" stroke-width="2.5" marker-end="url(#arr)"/>
+  <line x1="492" y1="170" x2="548" y2="170" stroke="#3ee0c5" stroke-width="2.5" marker-end="url(#arr)"/>
+  <line x1="748" y1="170" x2="804" y2="170" stroke="#3ee0c5" stroke-width="2.5" marker-end="url(#arr)"/>
+
+  <text x="40" y="290" fill="#8b9aab" font-family="Segoe UI, system-ui, sans-serif" font-size="14">Not on this path: spark (orchestrator LLM) and ai4090 (coder LLM). They answer API calls. They do not run pytest.</text>
+
+  <rect x="36" y="312" rx="12" width="1028" height="76" fill="#151c24" stroke="#2a3544"/>
+  <text x="56" y="346" fill="#e8eef4" font-family="Segoe UI, system-ui, sans-serif" font-size="15">RDP is the extreme example of the split: the Windows machine is only a screen. The Linux box is only for writing. The runners are only for checking. GitHub is only the bulletin board.</text>
+  <text x="56" y="370" fill="#8b9aab" font-family="Segoe UI, system-ui, sans-serif" font-size="14">If you install an Actions listener on devlin, you have undone the split.</text>
+</svg>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 480" role="img" aria-labelledby="t3 d3">
+  <title id="t3">How GitHub picks a machine</title>
+  <desc id="d3">Workflows use runs-on labels. Each self-hosted runner only picks jobs that match its labels. ubuntu-latest would bill GitHub-hosted minutes.</desc>
+  <rect width="1100" height="480" fill="#0b0f14"/>
+  <text x="40" y="44" fill="#e8eef4" font-family="Segoe UI, system-ui, sans-serif" font-size="24" font-weight="700">How a job finds a box</text>
+  <text x="40" y="70" fill="#8b9aab" font-family="Segoe UI, system-ui, sans-serif" font-size="14">The workflow file names a label set. Idle runners with those labels pick the job. No cloud VM starts.</text>
+
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15">
+    <rect x="40" y="100" rx="12" width="1020" height="88" fill="#151c24" stroke="#2a3544"/>
+    <text x="60" y="136" fill="#8b9aab"># .github/workflows/ci.yml</text>
+    <text x="60" y="164" fill="#e8eef4">runs-on: [self-hosted, Linux, arlin]     <tspan fill="#8b9aab"># never ubuntu-latest</tspan></text>
+  </g>
+
+  <g font-family="Segoe UI, system-ui, sans-serif">
+    <rect x="40" y="220" rx="14" width="320" height="210" fill="#1a2330" stroke="#3d8bfd" stroke-width="2"/>
+    <text x="200" y="256" text-anchor="middle" fill="#3d8bfd" font-size="12">MATCH · ARLIN</text>
+    <text x="60" y="292" fill="#e8eef4" font-size="15">Linux tests, Docker image</text>
+    <text x="60" y="316" fill="#e8eef4" font-size="15">builds, nested bwrap</text>
+    <text x="60" y="352" fill="#8b9aab" font-size="14">Also still answers the old</text>
+    <text x="60" y="374" fill="#8b9aab" font-size="14">label ai4090 so older</text>
+    <text x="60" y="396" fill="#8b9aab" font-size="14">workflows keep working.</text>
+
+    <rect x="390" y="220" rx="14" width="320" height="210" fill="#1a2330" stroke="#3d8bfd" stroke-width="2"/>
+    <text x="550" y="256" text-anchor="middle" fill="#3d8bfd" font-size="12">MATCH · ARWIN</text>
+    <text x="410" y="292" fill="#e8eef4" font-size="15">Windows installer, NSIS,</text>
+    <text x="410" y="316" fill="#e8eef4" font-size="15">PowerShell, Win client</text>
+    <text x="410" y="352" fill="#8b9aab" font-size="14">runs-on: [self-hosted, arwin]</text>
+    <text x="410" y="374" fill="#8b9aab" font-size="14">Keep a legacy win-vm label</text>
+    <text x="410" y="396" fill="#8b9aab" font-size="14">if old workflows still use it.</text>
+
+    <rect x="740" y="220" rx="14" width="320" height="210" fill="#1a2330" stroke="#3d8bfd" stroke-width="2"/>
+    <text x="900" y="256" text-anchor="middle" fill="#3d8bfd" font-size="12">MATCH · MACMINI</text>
+    <text x="760" y="292" fill="#e8eef4" font-size="15">macOS client, Ink, notarize</text>
+    <text x="760" y="316" fill="#e8eef4" font-size="15">paths, ARM64</text>
+    <text x="760" y="352" fill="#8b9aab" font-size="14">This is the expensive one</text>
+    <text x="760" y="374" fill="#8b9aab" font-size="14">on GitHub-hosted (10× Linux).</text>
+    <text x="760" y="396" fill="#8b9aab" font-size="14">Owning a Mini pays for itself.</text>
+  </g>
+</svg>

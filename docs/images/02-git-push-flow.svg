@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 420" role="img" aria-labelledby="t2 d2">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 500" role="img" aria-labelledby="t2 d2">
   <title id="t2">Path of a git push</title>
   <desc id="d2">Developer on Windows RDPs to a ThinkCentre Tiny, commits, pushes to GitHub. GitHub then dispatches jobs to the three self-hosted runners. LLM boxes are not in this path.</desc>
   <defs>
@@ -6,7 +6,7 @@
       <path d="M0,0 L10,5 L0,10 z" fill="#3ee0c5"/>
     </marker>
   </defs>
-  <rect width="1100" height="420" fill="#0b0f14"/>
+  <rect width="1100" height="500" fill="#0b0f14"/>
   <text x="40" y="44" fill="#e8eef4" font-family="Segoe UI, system-ui, sans-serif" font-size="24" font-weight="700">What happens when you push</text>
   <text x="40" y="70" fill="#8b9aab" font-family="Segoe UI, system-ui, sans-serif" font-size="14">Write code on the ThinkCentre Tiny. GitHub never sees your GPU boxes.</text>
 
@@ -43,9 +43,11 @@
   <line x1="492" y1="170" x2="548" y2="170" stroke="#3ee0c5" stroke-width="2.5" marker-end="url(#arr)"/>
   <line x1="748" y1="170" x2="804" y2="170" stroke="#3ee0c5" stroke-width="2.5" marker-end="url(#arr)"/>
 
-  <text x="40" y="290" fill="#8b9aab" font-family="Segoe UI, system-ui, sans-serif" font-size="14">Not on this path: orchestrator-gpu and coder-gpu. They answer API calls. They do not run pytest.</text>
+  <text x="40" y="310" fill="#8b9aab" font-family="Segoe UI, system-ui, sans-serif" font-size="14">Not on this path: orchestrator-gpu and coder-gpu. They answer API calls. They do not run pytest.</text>
 
-  <rect x="36" y="312" rx="12" width="1028" height="76" fill="#151c24" stroke="#2a3544"/>
-  <text x="56" y="346" fill="#e8eef4" font-family="Segoe UI, system-ui, sans-serif" font-size="15">RDP is the extreme example of the split: the Windows machine is only a screen. The ThinkCentre Tiny is only for writing. The runners are only for checking. GitHub is only the bulletin board.</text>
-  <text x="56" y="370" fill="#8b9aab" font-family="Segoe UI, system-ui, sans-serif" font-size="14">If you install an Actions listener on the ThinkCentre Tiny, you have undone the split.</text>
+  <rect x="36" y="330" rx="12" width="1028" height="140" fill="#151c24" stroke="#2a3544"/>
+  <text x="56" y="362" fill="#e8eef4" font-family="Segoe UI, system-ui, sans-serif" font-size="15">RDP is the extreme example of the split:</text>
+  <text x="56" y="386" fill="#e8eef4" font-family="Segoe UI, system-ui, sans-serif" font-size="15">the Windows machine is only a screen. The ThinkCentre Tiny is only for writing.</text>
+  <text x="56" y="410" fill="#e8eef4" font-family="Segoe UI, system-ui, sans-serif" font-size="15">The runners are only for checking. GitHub is only the bulletin board.</text>
+  <text x="56" y="442" fill="#8b9aab" font-family="Segoe UI, system-ui, sans-serif" font-size="14">If you install an Actions listener on the ThinkCentre Tiny, you have undone the split.</text>
 </svg>

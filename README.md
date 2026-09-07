@@ -1,6 +1,6 @@
 # Self-hosted GitHub CI for Ironclad AI — a beginner how-to
 
-This is an **example lab**, not a dump of anyone’s real hostnames. The idea: a few small PCs run GitHub Actions for a private [Ironclad AI](https://github.com/GrokBuildMJW/ironclad-ai) repo so you do not buy GitHub-hosted minutes. Names below (`devbox`, `linux-ci`, …) are placeholders. Pick your own aliases in `~/.ssh/config`.
+This is an **example lab**, not a dump of anyone’s real hostnames. The idea: a few small PCs run GitHub Actions for **Ironclad** so you do not buy GitHub-hosted minutes. Public sources will live in the `ironclad` repo. Names below (`devbox`, `linux-ci`, …) are placeholders. Pick your own aliases in `~/.ssh/config`.
 
 No IPs, no SSH keys, no registration tokens live in this tree.
 
@@ -61,7 +61,7 @@ Cursor runs **on the ThinkCentre Tiny**, inside that RDP session. You are lookin
 ![Four steps: RDP, git push, GitHub, three runners](docs/images/02-git-push-flow.svg)
 
 1. You are already inside **devbox** via RDP.
-2. `git push` to your private Ironclad product repo.
+2. `git push` to the `ironclad` repo.
 3. A workflow starts. It must **not** say `runs-on: ubuntu-latest`.
 4. Idle listeners on **linux-ci** / **windows-ci** / **macos-ci** pick the jobs that match their labels.
 5. **orchestrator-gpu** and **coder-gpu** do not appear in this story. They serve models.
@@ -109,9 +109,9 @@ You do not need a cluster. A used Ryzen mini-PC, a spare Windows desktop, and a 
 - `KeepAlive` + `RunAtLoad`. Prevent sleep on AC power. Display sleep is fine.
 - This is the box that used to destroy GitHub-hosted budgets. Owning it is the whole trick.
 
-### 5. Register against the **private product repo**
+### 5. Register against the **ironclad** repo
 
-Create a runner in the GitHub UI for that repo, copy the token to the box, run `config.sh` / `config.cmd` **once**. Do not commit the token. Do not `--replace` unless GitHub says the old id is dead.
+Create a runner in the GitHub UI for `ironclad`, copy the token to the box, run `config.sh` / `config.cmd` **once**. Do not commit the token. Do not `--replace` unless GitHub says the old id is dead.
 
 ### 6. Point every workflow at those labels
 
@@ -122,7 +122,7 @@ Search the repo for `ubuntu-latest`, `windows-latest`, `macos-latest`. Each hit 
 1. **Runners are not editors.** The ThinkCentre Tiny writes. `linux-ci` / `windows-ci` / `macos-ci` check.
 2. **GPUs are not runners.** `orchestrator-gpu` and `coder-gpu` serve LLMs. One GPU occupant each.
 3. **Windows is not the workspace.** RDP is a viewport. The tree lives on the ThinkCentre Tiny.
-4. **No IPs in the product repo.** Aliases in SSH config. A naming-gate CI job can fail a PR that pastes a LAN address.
+4. **No IPs in the `ironclad` repo.** Aliases in SSH config. A naming-gate CI job can fail a PR that pastes a LAN address.
 5. **One listener per machine.** Native systemd / Windows service / LaunchDaemon.
 6. **Hosted labels are a regression.** `ubuntu-latest` is how you go broke again.
 

@@ -16,7 +16,7 @@
 
   <rect x="340" y="100" rx="18" width="420" height="86" fill="#1c2734" stroke="#3ee0c5" stroke-width="2" filter="url(#s)"/>
   <text x="550" y="136" text-anchor="middle" fill="#3ee0c5" font-family="Segoe UI, system-ui, sans-serif" font-size="13" letter-spacing="1.5">GITHUB</text>
-  <text x="550" y="164" text-anchor="middle" fill="#e8eef4" font-family="Segoe UI, system-ui, sans-serif" font-size="18" font-weight="700">private product repo</text>
+  <text x="550" y="164" text-anchor="middle" fill="#e8eef4" font-family="Segoe UI, system-ui, sans-serif" font-size="18" font-weight="700">ironclad</text>
 
   <line x1="550" y1="186" x2="550" y2="228" stroke="#3ee0c5" stroke-width="2"/>
   <text x="564" y="220" fill="#8b9aab" font-family="Segoe UI, system-ui, sans-serif" font-size="12">Actions jobs</text>

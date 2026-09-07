@@ -54,7 +54,7 @@
     <rect x="40" y="430" rx="16" width="300" height="170" fill="#1a2330" stroke="#f0a04b" stroke-width="2" filter="url(#s)"/>
     <text x="58" y="460" fill="#f0a04b" font-size="12" letter-spacing="1.2">NOT A RUNNER · DEV</text>
     <text x="58" y="490" fill="#e8eef4" font-size="20" font-weight="700">devbox</text>
-    <text x="58" y="516" fill="#b7c4d2" font-size="14">ThinkCentre Tiny · Cursor + CLIs</text>
+    <text x="58" y="516" fill="#b7c4d2" font-size="14">ThinkCentre Tiny · native Linux</text>
     <text x="58" y="538" fill="#8b9aab" font-size="13">You RDP in from Windows.</text>
     <text x="58" y="558" fill="#8b9aab" font-size="13">No Actions listener on this box.</text>
     <text x="58" y="578" fill="#8b9aab" font-size="13">Extreme split: write ≠ CI.</text>

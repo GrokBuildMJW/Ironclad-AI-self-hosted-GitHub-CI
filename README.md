@@ -24,7 +24,7 @@ You still pay GitHub for the usual account (and for artifact storage if you keep
 
 | Example name | What it is | GitHub Actions? |
 |---|---|---|
-| **devbox** | Lenovo **ThinkCentre Tiny**, Ubuntu Desktop, Cursor + CLIs | **No. Never.** |
+| **devbox** | Lenovo **ThinkCentre Tiny**, Ubuntu Desktop, native Linux toolchain | **No. Never.** |
 | Operator PC | Windows, Remote Desktop client only | No |
 | **linux-ci** | Linux mini-PC, native Actions listener | Yes — Linux jobs |
 | **windows-ci** | Windows desktop, Windows service | Yes — Windows jobs |
@@ -50,7 +50,7 @@ The Windows machine is **not** where Ironclad lives. It is a keyboard, a screen,
 4. First prompt is the **device** user (Ubuntu Remote Login). Then GDM asks for the Linux account.
 5. If the session is a black screen, turn NLA off on that `.rdp` file and try again. Do not install VNC. xrdp is fallback only.
 
-Cursor runs **on the ThinkCentre Tiny**, inside that RDP session. You are looking at Linux through Windows. A Windows update cannot trash the toolchain. A failed CI job cannot lock the files you are typing.
+You work **on the ThinkCentre Tiny**, inside that RDP session. Linux is native there — no Docker on the editor box. A Windows update cannot trash the toolchain. A failed CI job cannot lock the files you are typing.
 
 **Do not** install a GitHub Actions listener on the ThinkCentre Tiny. If you do, you have put the editor and the judge on the same disk.
 
@@ -71,7 +71,7 @@ Cursor runs **on the ThinkCentre Tiny**, inside that RDP session. You are lookin
 ![Three columns for Linux, Windows, macOS label matching](docs/images/03-job-routing.svg)
 
 ```yaml
-# Linux tests and docker-test
+# Linux tests
 runs-on: [self-hosted, Linux, linux-ci]
 
 # Windows installer / client
@@ -94,9 +94,8 @@ You do not need a cluster. A used Ryzen mini-PC, a spare Windows desktop, and a 
 ### 2. Linux runner (`linux-ci`)
 
 - Ubuntu **24.04** with the **6.8** GA kernel. Do not install 26.04 on the runner. Do not copy this mix onto the ThinkCentre Tiny.
-- AppArmor **off** (`apparmor=0` on the kernel cmdline, units masked) so nested Bubblewrap in `docker-test` works. Do **not** put `"apparmor-profile"` in Docker `daemon.json` — Engine 29.7.x refuses to start.
-- Docker Engine for **tests**, not for the listener.
 - Native systemd listener (`actions.runner.<org>-<repo>.<name>`), not a compose container with `restart=always`.
+- Jobs run on the host. The ThinkCentre Tiny already is Linux, so the editor does not need Docker, and this example does not put Docker on `linux-ci` either.
 
 ### 3. Windows runner (`windows-ci`)
 
@@ -130,7 +129,7 @@ Search the repo for `ubuntu-latest`, `windows-latest`, `macos-latest`. Each hit 
 
 - Not a dump of a real LAN. Example names only.
 - Not a SaaS. Not a Terraform module.
-- Not permission to copy AppArmor-off or the 6.8 kernel pin onto the **ThinkCentre Tiny**.
+- Not permission to install an Actions listener on the **ThinkCentre Tiny**.
 - Not a weight mirror. Model pins live in the sibling Spark / 4090 recipe repos.
 - Not a promise that GitHub is free. Seats, LFS, and artifact storage still exist. **Job minutes** are what this lab removes.
 

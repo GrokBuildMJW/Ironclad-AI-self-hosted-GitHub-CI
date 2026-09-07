@@ -25,9 +25,9 @@
     <text x="664" y="136" fill="#f0a04b" font-size="12" letter-spacing="1.2">DEV WORKSTATION · LINUX</text>
     <text x="664" y="176" fill="#e8eef4" font-size="22" font-weight="700">devbox</text>
     <text x="664" y="210" fill="#b7c4d2" font-size="15">ThinkCentre Tiny · Ubuntu Desktop</text>
-    <text x="664" y="242" fill="#8b9aab" font-size="14">Cursor, git, uv, Docker for you.</text>
-    <text x="664" y="264" fill="#8b9aab" font-size="14">AppArmor stays on. Do not copy</text>
-    <text x="664" y="286" fill="#8b9aab" font-size="14">the runner kernel pin onto this box.</text>
+    <text x="664" y="242" fill="#8b9aab" font-size="14">git, uv, native Linux toolchain.</text>
+    <text x="664" y="264" fill="#8b9aab" font-size="14">Native Linux desktop. No Docker.</text>
+    <text x="664" y="286" fill="#8b9aab" font-size="14">Do not turn this box into a runner.</text>
     <text x="664" y="320" fill="#8b9aab" font-size="14">git push origin  from here.</text>
     <text x="664" y="342" fill="#8b9aab" font-size="14">Never install actions.runner.* here.</text>
   </g>
@@ -38,5 +38,5 @@
 
   <rect x="40" y="406" rx="12" width="1020" height="84" fill="#151c24" stroke="#2a3544"/>
   <text x="60" y="440" fill="#e8eef4" font-family="Segoe UI, system-ui, sans-serif" font-size="15">Why this is the point: a crashed CI job cannot eat the editor. A Windows update cannot eat the Linux toolchain. A GitHub runner cannot write into the tree you are typing in.</text>
-  <text x="60" y="466" fill="#8b9aab" font-family="Segoe UI, system-ui, sans-serif" font-size="14">VNC is not the path. xrdp is fallback only. Daily driver is Cursor on the ThinkCentre Tiny, viewed with the Windows Remote Desktop client.</text>
+  <text x="60" y="466" fill="#8b9aab" font-family="Segoe UI, system-ui, sans-serif" font-size="14">VNC is not the path. xrdp is fallback only. Daily driver is the Linux desktop on the ThinkCentre Tiny, viewed with the Windows Remote Desktop client.</text>
 </svg>

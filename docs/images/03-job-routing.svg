@@ -14,8 +14,8 @@
   <g font-family="Segoe UI, system-ui, sans-serif">
     <rect x="40" y="220" rx="14" width="320" height="210" fill="#1a2330" stroke="#3d8bfd" stroke-width="2"/>
     <text x="200" y="256" text-anchor="middle" fill="#3d8bfd" font-size="12">MATCH · LINUX-CI</text>
-    <text x="60" y="292" fill="#e8eef4" font-size="15">Linux tests, Docker image</text>
-    <text x="60" y="316" fill="#e8eef4" font-size="15">builds, nested bwrap</text>
+    <text x="60" y="292" fill="#e8eef4" font-size="15">Linux tests, native</text>
+    <text x="60" y="316" fill="#e8eef4" font-size="15">toolchain on the box</text>
     <text x="60" y="352" fill="#8b9aab" font-size="14">Do not reuse a GPU-box</text>
     <text x="60" y="374" fill="#8b9aab" font-size="14">label on this machine.</text>
     <text x="60" y="396" fill="#8b9aab" font-size="14">Rename old workflows.</text>

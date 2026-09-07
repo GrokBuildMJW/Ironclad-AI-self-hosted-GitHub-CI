@@ -8,28 +8,27 @@
   <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15">
     <rect x="40" y="100" rx="12" width="1020" height="88" fill="#151c24" stroke="#2a3544"/>
     <text x="60" y="136" fill="#8b9aab"># .github/workflows/ci.yml</text>
-    <text x="60" y="164" fill="#e8eef4">runs-on: [self-hosted, Linux, arlin]     <tspan fill="#8b9aab"># never ubuntu-latest</tspan></text>
+    <text x="60" y="164" fill="#e8eef4">runs-on: [self-hosted, Linux, linux-ci]     <tspan fill="#8b9aab"># never ubuntu-latest</tspan></text>
   </g>
 
   <g font-family="Segoe UI, system-ui, sans-serif">
     <rect x="40" y="220" rx="14" width="320" height="210" fill="#1a2330" stroke="#3d8bfd" stroke-width="2"/>
-    <text x="200" y="256" text-anchor="middle" fill="#3d8bfd" font-size="12">MATCH · ARLIN</text>
+    <text x="200" y="256" text-anchor="middle" fill="#3d8bfd" font-size="12">MATCH · LINUX-CI</text>
     <text x="60" y="292" fill="#e8eef4" font-size="15">Linux tests, Docker image</text>
     <text x="60" y="316" fill="#e8eef4" font-size="15">builds, nested bwrap</text>
-    <text x="60" y="352" fill="#8b9aab" font-size="14">Also still answers the old</text>
-    <text x="60" y="374" fill="#8b9aab" font-size="14">label ai4090 so older</text>
-    <text x="60" y="396" fill="#8b9aab" font-size="14">workflows keep working.</text>
+    <text x="60" y="352" fill="#8b9aab" font-size="14">Do not reuse a GPU-box</text>
+    <text x="60" y="374" fill="#8b9aab" font-size="14">label on this machine.</text>
+    <text x="60" y="396" fill="#8b9aab" font-size="14">Rename old workflows.</text>
 
     <rect x="390" y="220" rx="14" width="320" height="210" fill="#1a2330" stroke="#3d8bfd" stroke-width="2"/>
-    <text x="550" y="256" text-anchor="middle" fill="#3d8bfd" font-size="12">MATCH · ARWIN</text>
+    <text x="550" y="256" text-anchor="middle" fill="#3d8bfd" font-size="12">MATCH · WINDOWS-CI</text>
     <text x="410" y="292" fill="#e8eef4" font-size="15">Windows installer, NSIS,</text>
     <text x="410" y="316" fill="#e8eef4" font-size="15">PowerShell, Win client</text>
-    <text x="410" y="352" fill="#8b9aab" font-size="14">runs-on: [self-hosted, arwin]</text>
-    <text x="410" y="374" fill="#8b9aab" font-size="14">Keep a legacy win-vm label</text>
-    <text x="410" y="396" fill="#8b9aab" font-size="14">if old workflows still use it.</text>
+    <text x="410" y="352" fill="#8b9aab" font-size="14">runs-on:</text>
+    <text x="410" y="374" fill="#8b9aab" font-size="14">[self-hosted, windows-ci]</text>
 
     <rect x="740" y="220" rx="14" width="320" height="210" fill="#1a2330" stroke="#3d8bfd" stroke-width="2"/>
-    <text x="900" y="256" text-anchor="middle" fill="#3d8bfd" font-size="12">MATCH · MACMINI</text>
+    <text x="900" y="256" text-anchor="middle" fill="#3d8bfd" font-size="12">MATCH · MACOS-CI</text>
     <text x="760" y="292" fill="#e8eef4" font-size="15">macOS client, Ink, notarize</text>
     <text x="760" y="316" fill="#e8eef4" font-size="15">paths, ARM64</text>
     <text x="760" y="352" fill="#8b9aab" font-size="14">This is the expensive one</text>

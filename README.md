@@ -32,7 +32,7 @@ You still pay GitHub for the usual account (and for artifact storage if you keep
 | **coder-gpu** | Consumer GPU box, coder LLM (OpenAI-compatible) | No |
 | **orchestrator-gpu** | Dedicated inference box, orchestrator LLM | No |
 
-Model recipes (hardware pins, not this lab’s hostnames): [Flash-Next on DGX Spark](https://github.com/GrokBuildMJW/Qwen3.8-Flash-Next-NVFP4-SGLang-DGX-Spark), [27B vLLM](https://github.com/GrokBuildMJW/Qwen3.8-27B-NVFP4-vLLM-DGX-Spark), [Qwen3-Coder on RTX 4090](https://github.com/GrokBuildMJW/Qwen3-Coder-30B-A3B-Q4_K_M-llama.cpp-RTX-4090).
+Optional, not this lab: [minimal Docker hardware](https://github.com/GrokBuildMJW/Ironclad-AI-minimal-hardware) if you only *run* Ironclad on one PC, and [cloud coder](https://github.com/GrokBuildMJW/Ironclad-AI-cloud-coder) if the model lives at a vendor instead of a GPU. Local serving pins: [Flash-Next on DGX Spark](https://github.com/GrokBuildMJW/Qwen3.8-Flash-Next-NVFP4-SGLang-DGX-Spark), [27B vLLM](https://github.com/GrokBuildMJW/Qwen3.8-27B-NVFP4-vLLM-DGX-Spark), [Qwen3-Coder on RTX 4090](https://github.com/GrokBuildMJW/Qwen3-Coder-30B-A3B-Q4_K_M-llama.cpp-RTX-4090).
 
 ## Extreme split: RDP from Windows onto the ThinkCentre Tiny
 
